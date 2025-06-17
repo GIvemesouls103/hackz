@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>System Breach</title>
+  <style>
+    body {
+      background-color: black;
+      color: lime;
+      font-family: monospace;
+      font-size: 18px;
+      padding: 20px;
+    }
+    .warning {
+      color: red;
+      font-size: 24px;
+      animation: blink 0.8s infinite alternate;
+    }
+    @keyframes blink {
+      from { opacity: 1; }
+      to { opacity: 0.3; }
+    }
+    #reveal {
+      display: none;
+      color: white;
+      font-size: 26px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <div class="warning">⚠ VIRUS INITIATED... SYSTEM BREACH DETECTED ⚠</div>
+    <pre id="terminal">Initializing backdoor...
+Injecting payload...
+Accessing system files...
+Deleting C:\Windows\System32...
+Encrypting data...
+</pre>
+    <div id="reveal">😄 JUST KIDDING! No harm done. It's a prank!</div>
+  </div>
+  <audio id="beep" loop autoplay>
+    <source src="https://www.soundjay.com/button/beep-07.wav" type="audio/wav">
+  </audio>
+  <script>
+    setTimeout(() => {
+      document.getElementById('main').style.backgroundColor = "#111";
+      document.getElementById('terminal').style.display = "none";
+      document.querySelector('.warning').style.display = "none";
+      document.getElementById('reveal').style.display = "block";
+      document.getElementById('beep').pause();
+    }, 8000); // change time as needed
+  </script>
+</body>
+</html>
